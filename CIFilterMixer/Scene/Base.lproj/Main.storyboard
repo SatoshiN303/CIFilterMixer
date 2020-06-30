@@ -56,6 +56,9 @@
                                                                 <state key="normal" title="クリア">
                                                                     <color key="titleColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 </state>
+                                                                <connections>
+                                                                    <action selector="original:" destination="BYZ-38-t0r" eventType="touchUpInside" id="N7n-aI-u1J"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WjD-ut-Ej1">
                                                                 <rect key="frame" x="141.5" y="0.0" width="131" height="30"/>
@@ -63,6 +66,9 @@
                                                                 <state key="normal" title="結果">
                                                                     <color key="titleColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 </state>
+                                                                <connections>
+                                                                    <action selector="result:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5th-nA-jfH"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9IY-m8-wxM">
                                                                 <rect key="frame" x="282.5" y="0.0" width="131.5" height="30"/>
@@ -70,6 +76,9 @@
                                                                 <state key="normal" title="Undo(一個戻り)">
                                                                     <color key="titleColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 </state>
+                                                                <connections>
+                                                                    <action selector="undo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EhS-nT-tyz"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                     </stackView>
@@ -77,118 +86,185 @@
                                                         <rect key="frame" x="0.0" y="40" width="221" height="30"/>
                                                         <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <state key="normal" title="CIColorMonochrome(色1回選択)"/>
+                                                        <connections>
+                                                            <action selector="CIColorMonochrome:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eNs-6A-1yK"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UdW-Yw-L06">
                                                         <rect key="frame" x="0.0" y="80" width="91" height="30"/>
                                                         <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <state key="normal" title="CIColorInvert"/>
+                                                        <connections>
+                                                            <action selector="CIColorInvert:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NXy-2Q-6vn"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HiB-UY-SLw">
                                                         <rect key="frame" x="0.0" y="120" width="115" height="30"/>
                                                         <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <state key="normal" title="CIColorPosterize"/>
+                                                        <connections>
+                                                            <action selector="CIColorPosterize:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cuQ-Eg-KBJ"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fTm-sS-GRt">
                                                         <rect key="frame" x="0.0" y="160" width="168" height="30"/>
                                                         <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <state key="normal" title="CIFalseColor(色2回選択)"/>
+                                                        <connections>
+                                                            <action selector="CIFalseColor:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rHW-QK-FOb"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EEd-By-lZU">
                                                         <rect key="frame" x="0.0" y="200" width="203" height="30"/>
                                                         <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <state key="normal" title="CIMaximumComponent(黒白)"/>
+                                                        <connections>
+                                                            <action selector="CIMaximumComponent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3le-fC-JaL"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PwV-tQ-pgV">
                                                         <rect key="frame" x="0.0" y="240" width="199" height="30"/>
                                                         <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <state key="normal" title="CIMinimumComponent(黒白)"/>
+                                                        <connections>
+                                                            <action selector="CIMinimumComponent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lWI-F5-dOn"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VZf-10-BTG">
                                                         <rect key="frame" x="0.0" y="280" width="129" height="30"/>
                                                         <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <state key="normal" title="CIPhotoEffectFade"/>
+                                                        <connections>
+                                                            <action selector="CIPhotoEffectFade:" destination="BYZ-38-t0r" eventType="touchUpInside" id="N6V-Bh-mLk"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BzJ-Z2-gwS">
                                                         <rect key="frame" x="0.0" y="320" width="150" height="30"/>
                                                         <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <state key="normal" title="CIPhotoEffectChrome"/>
+                                                        <connections>
+                                                            <action selector="CIPhotoEffectChrome:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WgI-Tk-gvw"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ghx-XV-s9i">
                                                         <rect key="frame" x="0.0" y="360" width="143" height="30"/>
                                                         <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <state key="normal" title="CIPhotoEffectInstant"/>
+                                                        <connections>
+                                                            <action selector="CIPhotoEffectInstant:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bQ0-Gc-j6d"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3wU-tq-PAm">
                                                         <rect key="frame" x="0.0" y="400" width="176" height="30"/>
                                                         <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <state key="normal" title="CIPhotoEffectMono(黒白)"/>
+                                                        <connections>
+                                                            <action selector="CIPhotoEffectMono:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TqD-AB-mi8"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="chB-Bj-E90">
                                                         <rect key="frame" x="0.0" y="440" width="166" height="30"/>
                                                         <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <state key="normal" title="CIPhotoEffectNoir(黒白)"/>
+                                                        <connections>
+                                                            <action selector="CIPhotoEffectNoir:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7uN-Ce-x6I"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NwJ-7Y-wZE">
                                                         <rect key="frame" x="0.0" y="480" width="150" height="30"/>
                                                         <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <state key="normal" title="CIPhotoEffectProcess"/>
+                                                        <connections>
+                                                            <action selector="CIPhotoEffectProcess:" destination="BYZ-38-t0r" eventType="touchUpInside" id="25I-Kl-u4l"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eiJ-rb-Szf">
                                                         <rect key="frame" x="0.0" y="520" width="173" height="30"/>
                                                         <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <state key="normal" title="CIPhotoEffectTonal(黒白)"/>
+                                                        <connections>
+                                                            <action selector="CIPhotoEffectTonal:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BbC-bD-6Da"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PWu-Hf-GwD">
                                                         <rect key="frame" x="0.0" y="560" width="152" height="30"/>
                                                         <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <state key="normal" title="CIPhotoEffectTransfer"/>
+                                                        <connections>
+                                                            <action selector="CIPhotoEffectTransfer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="e5D-ux-6om"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p93-uq-mGQ">
                                                         <rect key="frame" x="0.0" y="600" width="85" height="30"/>
                                                         <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <state key="normal" title="CISepiaTone"/>
+                                                        <connections>
+                                                            <action selector="CISepiaTone:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uwf-Q8-MqK"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KsK-fd-EEO">
                                                         <rect key="frame" x="0.0" y="640" width="76" height="30"/>
                                                         <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <state key="normal" title="CIVibrance"/>
+                                                        <connections>
+                                                            <action selector="CIVibrance:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uXo-7V-ueZ"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="suR-ea-M9X">
                                                         <rect key="frame" x="0.0" y="680" width="88" height="30"/>
                                                         <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <state key="normal" title="CIColorCube"/>
+                                                        <connections>
+                                                            <action selector="CIColorCube:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mRf-RE-gLS"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rPv-oJ-kNa">
                                                         <rect key="frame" x="0.0" y="720" width="198" height="30"/>
                                                         <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <state key="normal" title="CIColorCubeWithColorSpace"/>
+                                                        <connections>
+                                                            <action selector="CIColorCubeWithColorSpace:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Gcd-PT-bm7"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uFH-za-Kcw">
                                                         <rect key="frame" x="0.0" y="760" width="67" height="30"/>
                                                         <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <state key="normal" title="CIBoxBlur"/>
+                                                        <connections>
+                                                            <action selector="CIBoxBlur:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nET-0U-wuH"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zdU-7N-WN6">
                                                         <rect key="frame" x="0.0" y="800" width="105" height="30"/>
                                                         <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <state key="normal" title="CIGaussianBlur"/>
+                                                        <connections>
+                                                            <action selector="CIGaussianBlur:" destination="BYZ-38-t0r" eventType="touchUpInside" id="h3M-pC-TCa"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wsu-p9-cb3">
                                                         <rect key="frame" x="0.0" y="840" width="99" height="30"/>
                                                         <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <state key="normal" title="CIMedianFilter"/>
+                                                        <connections>
+                                                            <action selector="CIMedianFilter:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Hwo-E8-kGS"/>
+                                                        </connections>
                                                     </button>
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="yn1-pz-wIU" userLabel="Stack View4">
                                                         <rect key="frame" x="0.0" y="880" width="414" height="30"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contrast" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Has-MF-1vb">
-                                                                <rect key="frame" x="0.0" y="0.0" width="66.5" height="30"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="58.5" height="30"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="8ah-0s-SRk">
-                                                                <rect key="frame" x="74.5" y="0.0" width="289.5" height="31"/>
+                                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="2" translatesAutoresizingMaskIntoConstraints="NO" id="8ah-0s-SRk">
+                                                                <rect key="frame" x="66.5" y="0.0" width="297.5" height="31"/>
+                                                                <connections>
+                                                                    <action selector="contrastChnageFinished:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0pi-Ek-ksB"/>
+                                                                    <action selector="contrastChnaged:" destination="BYZ-38-t0r" eventType="valueChanged" id="i83-zA-2Q2"/>
+                                                                </connections>
                                                             </slider>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Value" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hJE-dO-ffA">
                                                                 <rect key="frame" x="372" y="0.0" width="42" height="30"/>
@@ -202,13 +278,17 @@
                                                         <rect key="frame" x="0.0" y="920" width="414" height="30"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Brightness" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wna-mU-198">
-                                                                <rect key="frame" x="0.0" y="0.0" width="78" height="30"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="70" height="30"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="v6o-aV-zPs">
-                                                                <rect key="frame" x="76" y="0.0" width="298" height="31"/>
+                                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="v6o-aV-zPs">
+                                                                <rect key="frame" x="68" y="0.0" width="306" height="31"/>
+                                                                <connections>
+                                                                    <action selector="brightnessChageFinished:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SPK-9v-UtX"/>
+                                                                    <action selector="brightnessChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="goq-cP-k6P"/>
+                                                                </connections>
                                                             </slider>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Value" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ygt-YG-BCo">
                                                                 <rect key="frame" x="372" y="0.0" width="42" height="30"/>
@@ -222,13 +302,17 @@
                                                         <rect key="frame" x="0.0" y="960" width="414" height="30"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Saturation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L51-VK-jjf">
-                                                                <rect key="frame" x="0.0" y="0.0" width="75" height="30"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="67" height="30"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="iyh-l0-hkm">
-                                                                <rect key="frame" x="73" y="0.0" width="301" height="31"/>
+                                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="2" translatesAutoresizingMaskIntoConstraints="NO" id="iyh-l0-hkm">
+                                                                <rect key="frame" x="65" y="0.0" width="309" height="31"/>
+                                                                <connections>
+                                                                    <action selector="saturationChangeFinished:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ulu-1C-Jap"/>
+                                                                    <action selector="saturationChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="nIU-lF-74c"/>
+                                                                </connections>
                                                             </slider>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Value" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Cm-1H-w97">
                                                                 <rect key="frame" x="372" y="0.0" width="42" height="30"/>
@@ -274,6 +358,16 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <size key="freeformSize" width="414" height="1500"/>
+                    <connections>
+                        <outlet property="brightnessSlider" destination="v6o-aV-zPs" id="wks-36-WSX"/>
+                        <outlet property="brightnessValueLabel" destination="ygt-YG-BCo" id="8HX-sa-1cS"/>
+                        <outlet property="contrastSlider" destination="8ah-0s-SRk" id="p7b-tA-kCs"/>
+                        <outlet property="contrastValueLabel" destination="hJE-dO-ffA" id="Nnu-2c-iIk"/>
+                        <outlet property="effectCountLabel" destination="2g3-wU-bys" id="aQj-sD-hUm"/>
+                        <outlet property="imageView" destination="R83-xv-Z5u" id="cjQ-Hw-GTf"/>
+                        <outlet property="saturationSlider" destination="iyh-l0-hkm" id="yV4-5k-YLG"/>
+                        <outlet property="saturationValueLabel" destination="1Cm-1H-w97" id="1dB-T5-ly0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

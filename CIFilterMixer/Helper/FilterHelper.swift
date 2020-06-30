@@ -11,7 +11,7 @@ import UIKit
 import CoreImage
 import CoreImage.CIFilterBuiltins
 
-struct Color {
+struct RGBColor {
     var red: Float
     var green: Float
     var blue: Float
@@ -24,12 +24,14 @@ enum CubeDimension: Int {
 
 class FilterHelper {
     
-    static func colorfilter(filter: CIFilter?,
+    // MARK: - Public
+    
+    static func filter(filter: CIFilter?,
                        originImage: UIImage?,
                        color1: UIColor?,
                        color2: UIColor?) -> UIImage? {
         guard
-            let colorFilter = filter,
+            let filter = filter,
             let image = originImage,
             let color1 = color1
         else {
@@ -37,26 +39,26 @@ class FilterHelper {
         }
         
         let ciImage = CIImage(image: image)
-        colorFilter.setValue(ciImage, forKey: kCIInputImageKey)
+        filter.setValue(ciImage, forKey: kCIInputImageKey)
         
         let ciColor = CIColor(color: color1)
         
-        if colorFilter is CIColorMonochrome {
-            colorFilter.setValue(ciColor , forKey: "inputColor")
-        } else if colorFilter is CIFalseColor {
-            colorFilter.setValue(ciColor , forKey: "inputColor0")
+        if filter is CIColorMonochrome {
+            filter.setValue(ciColor , forKey: "inputColor")
+        } else if filter is CIFalseColor {
+            filter.setValue(ciColor , forKey: "inputColor0")
             if let color2 = color2 {
                 let ciColor2 = CIColor(color: color2)
-                colorFilter.setValue(ciColor2, forKey: "inputColor1")
+                filter.setValue(ciColor2, forKey: "inputColor1")
             }
         }
         
-        return FilterHelper.outputImage(from: colorFilter)
+        return FilterHelper.outputImage(from: filter)
     }
     
     static func colorCubeFilter(filter: CIFilter?,
                                 originImage: UIImage?,
-                                color: Color) -> UIImage? {
+                                color: RGBColor) -> UIImage? {
         guard
             let filter = filter,
             let image = originImage
@@ -157,7 +159,7 @@ class FilterHelper {
      */
      
     private static func identityCubeData(withDimension cubeDimension: CubeDimension,
-                                        color: Color) -> Data? {
+                                        color: RGBColor) -> Data? {
         let dimension: Int = cubeDimension.rawValue
         let cubeSize = (dimension * dimension * dimension * MemoryLayout<Float>.size * 4)
         let cubeData = UnsafeMutablePointer<Float>.allocate(capacity: cubeSize)

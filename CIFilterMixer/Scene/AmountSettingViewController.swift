@@ -20,7 +20,9 @@ class AmountSettingViewController: UIViewController {
         didSet {
             self.slider.value = self.value
             self.label.text = String(self.slider.value)
-            self.imageView.image = FilterHelper.amountFilter(filter: self.filter, originImage: image, amount: self.value)
+            self.imageView.image = FilterHelper.amountFilter(filter: self.filter,
+                                                             originImage: image,
+                                                             amount: self.value)
         }
     }
     
@@ -28,10 +30,14 @@ class AmountSettingViewController: UIViewController {
     
     // MARK: - Initializer
     
-    static func makeInstance(image: UIImage, filter: CIFilter) -> AmountSettingViewController {
+    static func makeInstance(image: UIImage,
+                             filter: CIFilter,
+                             dismissHandler: @escaping ((_ uiImage: UIImage?, _ value: Float) -> Void) )
+        -> AmountSettingViewController {
         let vc = AmountSettingViewController()
         vc.image = image
         vc.filter = filter
+        vc.afterDismiss = dismissHandler
         return vc
     }
     

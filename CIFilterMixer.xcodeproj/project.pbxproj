@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		22546A5A24AB356E001C3F40 /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22546A5924AB356E001C3F40 /* MainPresenter.swift */; };
 		22859A8424A5FA8C00CBE1B2 /* AmountSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22859A8324A5FA8C00CBE1B2 /* AmountSettingViewController.swift */; };
 		22859A8624A5FAB500CBE1B2 /* RadiusSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22859A8524A5FAB500CBE1B2 /* RadiusSettingViewController.swift */; };
 		22859A8824A5FAE200CBE1B2 /* ColorSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22859A8724A5FAE200CBE1B2 /* ColorSettingViewController.swift */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		22546A5924AB356E001C3F40 /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
 		22859A8324A5FA8C00CBE1B2 /* AmountSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmountSettingViewController.swift; sourceTree = "<group>"; };
 		22859A8524A5FAB500CBE1B2 /* RadiusSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadiusSettingViewController.swift; sourceTree = "<group>"; };
 		22859A8724A5FAE200CBE1B2 /* ColorSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSettingViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +49,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		22546A5424AB1C16001C3F40 /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				22FEBC9D24A48B9B00773A87 /* ViewController.swift */,
+				22546A5924AB356E001C3F40 /* MainPresenter.swift */,
+				22859A8324A5FA8C00CBE1B2 /* AmountSettingViewController.swift */,
+				22859A8524A5FAB500CBE1B2 /* RadiusSettingViewController.swift */,
+				22859A8724A5FAE200CBE1B2 /* ColorSettingViewController.swift */,
+				22859A8924A5FB0000CBE1B2 /* ResultViewController.swift */,
+				22FEBC9F24A48B9B00773A87 /* Main.storyboard */,
+			);
+			path = Scene;
+			sourceTree = "<group>";
+		};
 		22C6A97424A99CD1008BC1CB /* Helper */ = {
 			isa = PBXGroup;
 			children = (
@@ -74,15 +90,10 @@
 		22FEBC9824A48B9A00773A87 /* CIFilterMixer */ = {
 			isa = PBXGroup;
 			children = (
-				22C6A97424A99CD1008BC1CB /* Helper */,
 				22FEBC9924A48B9B00773A87 /* AppDelegate.swift */,
 				22FEBC9B24A48B9B00773A87 /* SceneDelegate.swift */,
-				22FEBC9D24A48B9B00773A87 /* ViewController.swift */,
-				22859A8324A5FA8C00CBE1B2 /* AmountSettingViewController.swift */,
-				22859A8524A5FAB500CBE1B2 /* RadiusSettingViewController.swift */,
-				22859A8724A5FAE200CBE1B2 /* ColorSettingViewController.swift */,
-				22859A8924A5FB0000CBE1B2 /* ResultViewController.swift */,
-				22FEBC9F24A48B9B00773A87 /* Main.storyboard */,
+				22C6A97424A99CD1008BC1CB /* Helper */,
+				22546A5424AB1C16001C3F40 /* Scene */,
 				22FEBCA224A48B9C00773A87 /* Assets.xcassets */,
 				22FEBCA424A48B9C00773A87 /* LaunchScreen.storyboard */,
 				22FEBCA724A48B9C00773A87 /* Info.plist */,
@@ -165,6 +176,7 @@
 				22FEBC9A24A48B9B00773A87 /* AppDelegate.swift in Sources */,
 				22859A8A24A5FB0000CBE1B2 /* ResultViewController.swift in Sources */,
 				22859A8C24A5FBA900CBE1B2 /* FilterHelper.swift in Sources */,
+				22546A5A24AB356E001C3F40 /* MainPresenter.swift in Sources */,
 				22FEBC9C24A48B9B00773A87 /* SceneDelegate.swift in Sources */,
 				22859A8624A5FAB500CBE1B2 /* RadiusSettingViewController.swift in Sources */,
 				22859A8824A5FAE200CBE1B2 /* ColorSettingViewController.swift in Sources */,
