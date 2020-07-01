@@ -92,11 +92,7 @@ final class MainPresenter: MainPresnterProtocol {
                 fatalError()
         }
         let filterName = String(describing: CIColorControls.self)
-        
-        // For redo
-        let setting = FilterSettings(filterName: filterName, value: nil, color1: nil, color2: nil, rgb: nil)
-        self.settings.append(setting)
-        
+                
         self.executeFilter(effectName: filterName, img: img)
     }
     
@@ -114,7 +110,9 @@ final class MainPresenter: MainPresnterProtocol {
             effectName += " (" + colorTxt + ")"
         }
         
-        self.effects.append(effectName)
+        if effectName != String(describing: CIColorControls.self) {
+            self.effects.append(effectName)
+        }
         
         self.view?.updateImageView(img)
         self.view?.updateEffectCount(count: self.effects.count)

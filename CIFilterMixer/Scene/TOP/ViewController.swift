@@ -94,7 +94,12 @@ class ViewController: UIViewController, ViewProtocol {
     }
     
     private func showResult() {
-        let vc = ResultViewController.makeInstance(effects: presenter.effects)
+        var effects = presenter.effects
+        effects.append(String(format: "Contrast : %f", self.contrastValue))
+        effects.append(String(format: "Brightness : %f", self.brightnessValue))
+        effects.append(String(format: "Saturation : %f", self.saturationValue))
+
+        let vc = ResultViewController.makeInstance(effects: effects)
         self.present(vc, animated: true, completion: nil)
     }
     
