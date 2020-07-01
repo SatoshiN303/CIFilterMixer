@@ -13,8 +13,10 @@ import CoreImage.CIFilterBuiltins
 
 protocol ViewProtocol: class {
     var mainImage: UIImage { get }
+    
     func updateImageView(_ img: UIImage?)
     func updateEffectCount(count: Int)
+    func showColorPicker(_ filter: CIFilter)
 }
 
 class ViewController: UIViewController, ViewProtocol {
@@ -62,6 +64,14 @@ class ViewController: UIViewController, ViewProtocol {
     }
     
     // MARK: - Show Other ViewController
+    
+    func showColorPicker(_ filter: CIFilter) {
+        let colorPicker = AMColorPickerViewController()
+        colorPicker.selectedColor = UIColor.white
+        colorPicker.delegate = self
+        colorPicker.selectedFilter = filter
+        self.present(colorPicker, animated: true, completion: nil)
+    }
     
     private func showAmountSetting(_ filter: CIFilter) {
         let vc  = AmountSettingViewController.makeInstance(image: imageView.image,
@@ -130,7 +140,7 @@ extension ViewController {
     }
     
     @IBAction func CIColorMonochrome(_ sender: Any) {
-        //TODO: ColorPicker表示
+        self.showColorPicker(CIFilter.colorMonochrome())
     }
     
     @IBAction func CIColorPosterize(_ sender: Any) {
@@ -138,7 +148,7 @@ extension ViewController {
     }
     
     @IBAction func CIFalseColor(_ sender: Any) {
-        //TODO: ColorPicker表示
+        self.showColorPicker(CIFilter.falseColor())
     }
     
     @IBAction func CIMaximumComponent(_ sender: Any) {
@@ -241,4 +251,19 @@ extension ViewController {
         //TODO: colorControl() 実行
     }
 
+}
+
+// MARK: - AMColorPickerDelegate
+
+extension ViewController: AMColorPickerDelegate {
+    func colorPicker(_ colorPicker: AMColorPickerViewController, didSelect color: UIColor) {
+        print(color)
+    }
+    
+    func finalColor(color: UIColor, selectedFilter: CIFilter?) {
+        guard let filter = selectedFilter else {
+            return
+        }
+        presenter.applyColorFilter(filter: filter, color: color)
+    }
 }

@@ -28,12 +28,11 @@ class FilterHelper {
     
     static func filter(filter: CIFilter?,
                        originImage: UIImage?,
-                       color1: UIColor?,
-                       color2: UIColor?) -> UIImage? {
+                       color1: UIColor,
+                       color2: UIColor) -> UIImage? {
         guard
             let filter = filter,
-            let image = originImage,
-            let color1 = color1
+            let image = originImage
         else {
             return originImage
         }
@@ -42,15 +41,13 @@ class FilterHelper {
         filter.setValue(ciImage, forKey: kCIInputImageKey)
         
         let ciColor = CIColor(color: color1)
-        
-        if filter is CIColorMonochrome {
+                
+        if filter.name == String(describing: CIColorMonochrome.self) {
             filter.setValue(ciColor , forKey: "inputColor")
-        } else if filter is CIFalseColor {
+        } else if filter.name == String(describing: CIFalseColor.self) {
             filter.setValue(ciColor , forKey: "inputColor0")
-            if let color2 = color2 {
-                let ciColor2 = CIColor(color: color2)
-                filter.setValue(ciColor2, forKey: "inputColor1")
-            }
+            let ciColor2 = CIColor(color: color2)
+            filter.setValue(ciColor2, forKey: "inputColor1")
         }
         
         return FilterHelper.outputImage(from: filter)
@@ -78,7 +75,7 @@ class FilterHelper {
         filter.setValue(dimension.rawValue, forKey: "inputCubeDimension")
         filter.setValue(data, forKey: "inputCubeData")
         
-        if filter is CIColorCubeWithColorSpace {
+        if filter.name == String(describing: CIColorCubeWithColorSpace.self) {
             let colorSpace = CGColorSpaceCreateDeviceRGB()
             filter.setValue(colorSpace, forKey: "inputColorSpace")
         }

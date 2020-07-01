@@ -23,8 +23,11 @@ protocol MainPresnterProtocol: class {
     var view: ViewProtocol? { get set }
     var settings: [FilterSettings] { get set }
     var effects: [String] { get set }
+    var selectedColor: UIColor? { get set }
+    var selectedColor2: UIColor? { get set }
     
     func applyFilter(filter: CIFilter)
+    func applyColorFilter(filter: CIFilter, color: UIColor)
     func radiusSetting() -> ((_ uiImage: UIImage?, _ value: Float, _ filterName: String) -> Void)
     func amountSetting() -> ((_ uiImage: UIImage?, _ value: Float, _ filterName: String) -> Void)
     func colorSetting() -> ((_ uiImage: UIImage?, _ rgbColor: RGBColor, _ filterName: String) -> Void)
@@ -35,20 +38,39 @@ final class MainPresenter: MainPresnterProtocol {
     weak var view: ViewProtocol?
     var settings: [FilterSettings] = []
     var effects: [String] = []
+    var selectedColor: UIColor? = nil
+    var selectedColor2: UIColor?  = nil
     
     func applyFilter(filter: CIFilter) {
         print(String(describing: type(of: filter)))
-        
-        //TODO: colorControl() でセットされた色情報も追加
         guard let img = FilterHelper.filter(filter: filter,
                                             originImage: view?.mainImage,
-                                            color1: nil,
-                                            color2: nil) else {
+                                            color1: selectedColor ?? UIColor.clear,
+                                            color2: selectedColor2 ?? UIColor.clear) else {
                                                 fatalError()
         }
         
         let filterName = String(describing: type(of: filter))
         self.executeFilter(effectName: filterName, img: img)
+    }
+    
+    func applyColorFilter(filter: CIFilter, color: UIColor) {
+        if filter.name == String(describing: CIFalseColor.self) {
+            if selectedColor == nil {
+                selectedColor = color
+                self.view?.showColorPicker(filter)
+                return
+            } else if selectedColor2 == nil {
+                selectedColor2 = color
+            }
+            
+            if selectedColor != nil, selectedColor != nil {
+                applyFilter(filter: filter)
+            }
+        } else {
+            selectedColor = color
+            applyFilter(filter: filter)
+        }
     }
     
     func radiusSetting() -> ((_ uiImage: UIImage?, _ value: Float, _ filterName: String) -> Void) {
