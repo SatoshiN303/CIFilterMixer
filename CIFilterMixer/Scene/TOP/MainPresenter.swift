@@ -28,6 +28,7 @@ protocol MainPresnterProtocol: class {
     
     func applyFilter(filter: CIFilter)
     func applyColorFilter(filter: CIFilter, color: UIColor)
+    func applyColorControlFilter()
     func radiusSetting() -> ((_ uiImage: UIImage?, _ value: Float, _ filterName: String) -> Void)
     func amountSetting() -> ((_ uiImage: UIImage?, _ value: Float, _ filterName: String) -> Void)
     func colorSetting() -> ((_ uiImage: UIImage?, _ rgbColor: RGBColor, _ filterName: String) -> Void)
@@ -71,6 +72,16 @@ final class MainPresenter: MainPresnterProtocol {
             selectedColor = color
             applyFilter(filter: filter)
         }
+    }
+    
+    func applyColorControlFilter() {
+        guard
+            let colorControls = view?.colorControls,
+            let img = FilterHelper.colorControlsFilter(originImage:view?.mainImage, colorControls:colorControls) else {
+                fatalError()
+        }
+        let filterName = String(describing: CIColorControls.self)
+        self.executeFilter(effectName: filterName, img: img)
     }
     
     func radiusSetting() -> ((_ uiImage: UIImage?, _ value: Float, _ filterName: String) -> Void) {

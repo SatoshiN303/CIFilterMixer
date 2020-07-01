@@ -17,6 +17,12 @@ struct RGBColor {
     var blue: Float
 }
 
+struct ColorControls {
+    var contrast: Float
+    var brightness: Float
+    var saturation: Float
+}
+
 enum CubeDimension: Int {
     case thirtyTwo = 32
     case sixtyFour = 64
@@ -109,6 +115,23 @@ class FilterHelper {
                                          image: image,
                                          value: amount,
                                          keys: ["inputAmount"])
+    }
+    
+    static func colorControlsFilter(originImage: UIImage?,
+                                    colorControls: ColorControls) -> UIImage? {
+        guard let image = originImage else {
+            return originImage
+        }
+        
+        let filter = CIFilter.colorControls()
+        let ciImage = CIImage(image: image)
+        
+        filter.setValue(ciImage, forKey: kCIInputImageKey)
+        filter.setValue(NSNumber(value: colorControls.saturation), forKey: "inputSaturation")
+        filter.setValue(NSNumber(value: colorControls.brightness), forKey: "inputBrightness")
+        filter.setValue(NSNumber(value: colorControls.contrast), forKey: "inputContrast")
+        
+        return FilterHelper.outputImage(from: filter)
     }
     
     // MARK: - Private 

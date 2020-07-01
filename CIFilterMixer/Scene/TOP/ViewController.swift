@@ -13,6 +13,7 @@ import CoreImage.CIFilterBuiltins
 
 protocol ViewProtocol: class {
     var mainImage: UIImage { get }
+    var colorControls: ColorControls { get }
     
     func updateImageView(_ img: UIImage?)
     func updateEffectCount(count: Int)
@@ -103,6 +104,14 @@ class ViewController: UIViewController, ViewProtocol {
             fatalError()
         }
         return img
+    }
+    
+    var colorControls: ColorControls {
+        get {
+            return ColorControls(contrast: self.contrastValue,
+                                 brightness: self.brightnessValue,
+                                 saturation: self.saturationValue)
+        }
     }
     
     func updateImageView(_ img: UIImage?) {
@@ -230,7 +239,7 @@ extension ViewController {
     }
 
     @IBAction func contrastChnageFinished(_ sender: UISlider) {
-        //TODO: colorControl() 実行
+        presenter.applyColorControlFilter()
     }
     
     
@@ -239,7 +248,7 @@ extension ViewController {
     }
     
     @IBAction func brightnessChageFinished(_ sender: UISlider) {
-        //TODO: colorControl() 実行
+        presenter.applyColorControlFilter()
     }
     
     
@@ -248,7 +257,7 @@ extension ViewController {
     }
     
     @IBAction func saturationChangeFinished(_ sender: UISlider) {
-        //TODO: colorControl() 実行
+        presenter.applyColorControlFilter()
     }
 
 }
