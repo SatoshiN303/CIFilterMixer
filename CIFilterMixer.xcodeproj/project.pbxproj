@@ -10,7 +10,7 @@
 		22546A5A24AB356E001C3F40 /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22546A5924AB356E001C3F40 /* MainPresenter.swift */; };
 		22859A8424A5FA8C00CBE1B2 /* AmountSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22859A8324A5FA8C00CBE1B2 /* AmountSettingViewController.swift */; };
 		22859A8624A5FAB500CBE1B2 /* RadiusSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22859A8524A5FAB500CBE1B2 /* RadiusSettingViewController.swift */; };
-		22859A8824A5FAE200CBE1B2 /* ColorSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22859A8724A5FAE200CBE1B2 /* ColorSettingViewController.swift */; };
+		22859A8824A5FAE200CBE1B2 /* ColorCubeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22859A8724A5FAE200CBE1B2 /* ColorCubeViewController.swift */; };
 		22859A8A24A5FB0000CBE1B2 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22859A8924A5FB0000CBE1B2 /* ResultViewController.swift */; };
 		22859A8C24A5FBA900CBE1B2 /* FilterHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22859A8B24A5FBA900CBE1B2 /* FilterHelper.swift */; };
 		22F5334424AC309900AB26DA /* AMColorPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F5333824AC309800AB26DA /* AMColorPickerViewController.swift */; };
@@ -30,6 +30,7 @@
 		22F5335624AC6CEC00AB26DA /* UIStoryboardExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F5335524AC6CEC00AB26DA /* UIStoryboardExtension.swift */; };
 		22F5335824AC6F6200AB26DA /* Radius.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22F5335724AC6F6200AB26DA /* Radius.storyboard */; };
 		22F5335A24AC729300AB26DA /* Amount.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22F5335924AC729300AB26DA /* Amount.storyboard */; };
+		22F5335C24AC960600AB26DA /* ColorCube.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22F5335B24AC960600AB26DA /* ColorCube.storyboard */; };
 		22FEBC9A24A48B9B00773A87 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FEBC9924A48B9B00773A87 /* AppDelegate.swift */; };
 		22FEBC9C24A48B9B00773A87 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FEBC9B24A48B9B00773A87 /* SceneDelegate.swift */; };
 		22FEBC9E24A48B9B00773A87 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FEBC9D24A48B9B00773A87 /* ViewController.swift */; };
@@ -42,7 +43,7 @@
 		22546A5924AB356E001C3F40 /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
 		22859A8324A5FA8C00CBE1B2 /* AmountSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmountSettingViewController.swift; sourceTree = "<group>"; };
 		22859A8524A5FAB500CBE1B2 /* RadiusSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadiusSettingViewController.swift; sourceTree = "<group>"; };
-		22859A8724A5FAE200CBE1B2 /* ColorSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSettingViewController.swift; sourceTree = "<group>"; };
+		22859A8724A5FAE200CBE1B2 /* ColorCubeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorCubeViewController.swift; sourceTree = "<group>"; };
 		22859A8924A5FB0000CBE1B2 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		22859A8B24A5FBA900CBE1B2 /* FilterHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterHelper.swift; sourceTree = "<group>"; };
 		22F5333824AC309800AB26DA /* AMColorPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AMColorPickerViewController.swift; sourceTree = "<group>"; };
@@ -62,6 +63,7 @@
 		22F5335524AC6CEC00AB26DA /* UIStoryboardExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStoryboardExtension.swift; sourceTree = "<group>"; };
 		22F5335724AC6F6200AB26DA /* Radius.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Radius.storyboard; sourceTree = "<group>"; };
 		22F5335924AC729300AB26DA /* Amount.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Amount.storyboard; sourceTree = "<group>"; };
+		22F5335B24AC960600AB26DA /* ColorCube.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ColorCube.storyboard; sourceTree = "<group>"; };
 		22FEBC9624A48B9A00773A87 /* CIFilterMixer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CIFilterMixer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22FEBC9924A48B9B00773A87 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		22FEBC9B24A48B9B00773A87 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -126,7 +128,8 @@
 		22546A5E24AB5537001C3F40 /* Color */ = {
 			isa = PBXGroup;
 			children = (
-				22859A8724A5FAE200CBE1B2 /* ColorSettingViewController.swift */,
+				22859A8724A5FAE200CBE1B2 /* ColorCubeViewController.swift */,
+				22F5335B24AC960600AB26DA /* ColorCube.storyboard */,
 			);
 			path = Color;
 			sourceTree = "<group>";
@@ -267,6 +270,7 @@
 				22FEBCA324A48B9C00773A87 /* Assets.xcassets in Resources */,
 				22FEBCA124A48B9B00773A87 /* Main.storyboard in Resources */,
 				22F5334924AC309900AB26DA /* AMColorPickerViewController.xib in Resources */,
+				22F5335C24AC960600AB26DA /* ColorCube.storyboard in Resources */,
 				22F5334D24AC309900AB26DA /* AMColorPickerWheelView.xib in Resources */,
 				22F5334724AC309900AB26DA /* AMColorPickerRGBSliderView.xib in Resources */,
 			);
@@ -294,7 +298,7 @@
 				22546A5A24AB356E001C3F40 /* MainPresenter.swift in Sources */,
 				22FEBC9C24A48B9B00773A87 /* SceneDelegate.swift in Sources */,
 				22859A8624A5FAB500CBE1B2 /* RadiusSettingViewController.swift in Sources */,
-				22859A8824A5FAE200CBE1B2 /* ColorSettingViewController.swift in Sources */,
+				22859A8824A5FAE200CBE1B2 /* ColorCubeViewController.swift in Sources */,
 				22F5334624AC309900AB26DA /* AMColorPickerSlider.swift in Sources */,
 				22859A8424A5FA8C00CBE1B2 /* AmountSettingViewController.swift in Sources */,
 			);

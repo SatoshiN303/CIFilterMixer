@@ -90,7 +90,10 @@ class ViewController: UIViewController, ViewProtocol {
     }
     
     private func showColorSetting(_ filter: CIFilter) {
-        
+        let vc = ColorCubeViewController.makeInstance(image: imageView.image,
+                                                      filter: filter,
+                                                      dismissHandler: presenter.colorSetting())
+        self.present(vc, animated: true, completion: nil)
     }
     
     private func showResult() {
