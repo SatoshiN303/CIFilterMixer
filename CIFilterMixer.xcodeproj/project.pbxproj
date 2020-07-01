@@ -52,15 +52,55 @@
 		22546A5424AB1C16001C3F40 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
-				22FEBC9D24A48B9B00773A87 /* ViewController.swift */,
-				22546A5924AB356E001C3F40 /* MainPresenter.swift */,
-				22859A8324A5FA8C00CBE1B2 /* AmountSettingViewController.swift */,
-				22859A8524A5FAB500CBE1B2 /* RadiusSettingViewController.swift */,
-				22859A8724A5FAE200CBE1B2 /* ColorSettingViewController.swift */,
-				22859A8924A5FB0000CBE1B2 /* ResultViewController.swift */,
+				22546A5B24AB5503001C3F40 /* TOP */,
+				22546A5F24AB554E001C3F40 /* Result */,
+				22546A5D24AB5527001C3F40 /* Radius */,
+				22546A5C24AB5514001C3F40 /* Amout */,
+				22546A5E24AB5537001C3F40 /* Color */,
 				22FEBC9F24A48B9B00773A87 /* Main.storyboard */,
 			);
 			path = Scene;
+			sourceTree = "<group>";
+		};
+		22546A5B24AB5503001C3F40 /* TOP */ = {
+			isa = PBXGroup;
+			children = (
+				22FEBC9D24A48B9B00773A87 /* ViewController.swift */,
+				22546A5924AB356E001C3F40 /* MainPresenter.swift */,
+			);
+			path = TOP;
+			sourceTree = "<group>";
+		};
+		22546A5C24AB5514001C3F40 /* Amout */ = {
+			isa = PBXGroup;
+			children = (
+				22859A8324A5FA8C00CBE1B2 /* AmountSettingViewController.swift */,
+			);
+			path = Amout;
+			sourceTree = "<group>";
+		};
+		22546A5D24AB5527001C3F40 /* Radius */ = {
+			isa = PBXGroup;
+			children = (
+				22859A8524A5FAB500CBE1B2 /* RadiusSettingViewController.swift */,
+			);
+			path = Radius;
+			sourceTree = "<group>";
+		};
+		22546A5E24AB5537001C3F40 /* Color */ = {
+			isa = PBXGroup;
+			children = (
+				22859A8724A5FAE200CBE1B2 /* ColorSettingViewController.swift */,
+			);
+			path = Color;
+			sourceTree = "<group>";
+		};
+		22546A5F24AB554E001C3F40 /* Result */ = {
+			isa = PBXGroup;
+			children = (
+				22859A8924A5FB0000CBE1B2 /* ResultViewController.swift */,
+			);
+			path = Result;
 			sourceTree = "<group>";
 		};
 		22C6A97424A99CD1008BC1CB /* Helper */ = {

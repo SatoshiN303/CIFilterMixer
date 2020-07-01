@@ -26,13 +26,13 @@ class RadiusSettingViewController: UIViewController {
     private var image: UIImage?
     private var filter: CIFilter?
 
-    public var afterDismiss: ((_ uiImage: UIImage?, _ value: Float) -> Void)? = nil
+    public var afterDismiss: ((_ uiImage: UIImage?, _ value: Float, _ filterName: String) -> Void)? = nil
 
     // MARK: - Initializer
        
-    static func makeInstance(image: UIImage,
+    static func makeInstance(image: UIImage?,
                              filter: CIFilter,
-                             dismissHandler: @escaping ((_ uiImage: UIImage?, _ value: Float) -> Void) )
+                             dismissHandler: @escaping ((_ uiImage: UIImage?, _ value: Float, _ filterName: String) -> Void) )
         -> RadiusSettingViewController {
             let vc = RadiusSettingViewController()
             vc.image = image
@@ -54,8 +54,10 @@ class RadiusSettingViewController: UIViewController {
 
     @IBAction func back(_ sender: Any) {
         self.dismiss(animated: true) {
-            if self.afterDismiss != nil {
-                self.afterDismiss!(self.imageView.image, Float(self.value))
+            if let afterDismiss = self.afterDismiss, let filter = self.filter {
+                afterDismiss(self.imageView.image,
+                             Float(self.value),
+                             String(describing: type(of: filter)))
             }
         }
     }

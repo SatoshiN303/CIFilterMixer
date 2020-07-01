@@ -12,6 +12,9 @@ import CoreImage
 import CoreImage.CIFilterBuiltins
 
 protocol ViewProtocol: class {
+    var mainImage: UIImage { get }
+    func updateImageView(_ img: UIImage?)
+    func updateEffectCount(count: Int)
 }
 
 class ViewController: UIViewController, ViewProtocol {
@@ -61,17 +64,47 @@ class ViewController: UIViewController, ViewProtocol {
     // MARK: - Show Other ViewController
     
     private func showAmountSetting(_ filter: CIFilter) {
-
+        let vc  = AmountSettingViewController.makeInstance(image: imageView.image,
+                                                           filter: filter,
+                                                           dismissHandler: presenter.amountSetting())
+        self.present(vc, animated: true, completion: nil)
     }
     
     private func showRadiusSetting(_ filter: CIFilter) {
-        
+        let vc = RadiusSettingViewController.makeInstance(image: imageView.image,
+                                                          filter: filter,
+                                                          dismissHandler: presenter.radiusSetting())
+        self.present(vc, animated: true, completion: nil)
     }
     
     private func showColorSetting(_ filter: CIFilter) {
         
     }
     
+    private func showResult() {
+        // 適用したフィルター名の配列と Saturation, Brightness, Contrast の値を
+        // ResultVCに渡して表示する
+    }
+    
+    // MARK: - View Protocol
+    
+    var mainImage: UIImage {
+        guard let img = imageView.image else {
+            fatalError()
+        }
+        return img
+    }
+    
+    func updateImageView(_ img: UIImage?) {
+        guard let img = img else {
+            return
+        }
+        self.imageView.image = img
+    }
+    
+    func updateEffectCount(count: Int) {
+        self.effectCountLabel.text = String(count)
+    }
 }
 
 // MARK: - Button Action
@@ -85,6 +118,7 @@ extension ViewController {
     }
     
     @IBAction func result(_ sender: UIButton) {
+        showResult()
     }
     
     @IBAction func undo(_ sender: Any) {
