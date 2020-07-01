@@ -111,9 +111,39 @@ final class MainPresenter: MainPresnterProtocol {
     }
     
     private func executeFilter(effectName: String, img: UIImage?) {
+        var effectName = effectName
+        if effectName == String(describing: CIColorMonochrome.self) {
+            let color1: UIColor = selectedColor ?? UIColor.clear
+            let colorTxt = getColorText(color: color1)
+            effectName += " (" + colorTxt + ")"
+        } else if effectName == String(describing: CIFalseColor.self) {
+            let color1: UIColor = selectedColor ?? UIColor.clear
+            let color2: UIColor = selectedColor2 ?? UIColor.clear
+            var colorTxt = getColorText(color: color1)
+            colorTxt += "," +  getColorText(color: color2)
+            effectName += " (" + colorTxt + ")"
+        }
+        
         self.effects.append(effectName)
+
         self.view?.updateImageView(img)
         self.view?.updateEffectCount(count: self.effects.count)
+
+        self.selectedColor = nil
+        self.selectedColor2 = nil
+    }
+    
+    // MARK - MISC
+    
+    private func getColorText(color: UIColor) -> String {
+        guard let components = color.cgColor.components else {
+            return String("#ffffff")
+        }
+        if components.count >= 3 {
+            return String(format: "#%02x%02x%02x", Int(components[0] * 255), Int(components[1] * 255),Int(components[2] * 255))
+        } else { // White
+            return String("#ffffff")
+        }
     }
 
 }
