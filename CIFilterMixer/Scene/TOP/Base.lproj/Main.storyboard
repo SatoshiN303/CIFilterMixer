@@ -57,7 +57,7 @@
                                                                     <color key="titleColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 </state>
                                                                 <connections>
-                                                                    <action selector="original:" destination="BYZ-38-t0r" eventType="touchUpInside" id="N7n-aI-u1J"/>
+                                                                    <action selector="reset:" destination="BYZ-38-t0r" eventType="touchUpInside" id="47V-65-WWW"/>
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WjD-ut-Ej1">

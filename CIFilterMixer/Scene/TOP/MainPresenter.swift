@@ -32,6 +32,7 @@ protocol MainPresnterProtocol: class {
     func radiusSetting() -> ((_ uiImage: UIImage?, _ value: Float, _ filterName: String) -> Void)
     func amountSetting() -> ((_ uiImage: UIImage?, _ value: Float, _ filterName: String) -> Void)
     func colorSetting() -> ((_ uiImage: UIImage?, _ rgbColor: RGBColor, _ filterName: String) -> Void)
+    func reset()
 }
 
 final class MainPresenter: MainPresnterProtocol {
@@ -108,6 +109,13 @@ final class MainPresenter: MainPresnterProtocol {
             let str = String(format: "%@ (r : %.02f, g : %.02f, b : %.02f)", filterName, color.red, color.green, color.blue)
             self.executeFilter(effectName: str, img: img)
         }
+    }
+    
+    func reset() {
+        effects.removeAll()
+        settings.removeAll()
+        selectedColor = nil
+        selectedColor2 = nil
     }
     
     private func executeFilter(effectName: String, img: UIImage?) {

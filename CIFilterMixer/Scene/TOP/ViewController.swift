@@ -124,6 +124,17 @@ class ViewController: UIViewController, ViewProtocol {
     func updateEffectCount(count: Int) {
         self.effectCountLabel.text = String(count)
     }
+    
+    // MARK: - MISC
+    
+    private func reset() {
+        self.imageView.image = #imageLiteral(resourceName: "main")
+        self.contrastValue = 1
+        self.brightnessValue = 0
+        self.saturationValue = 1
+        updateEffectCount(count: 0)
+        presenter.reset()
+    }
 }
 
 // MARK: - Button Action
@@ -133,7 +144,8 @@ class ViewController: UIViewController, ViewProtocol {
 
 extension ViewController {
     
-    @IBAction func original(_ sender: Any) {
+    @IBAction func reset(_ sender: UIButton) {
+        reset()
     }
     
     @IBAction func result(_ sender: UIButton) {
