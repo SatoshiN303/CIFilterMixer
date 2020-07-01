@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bkx-v6-Tst">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Result View Controller-->
+        <scene sceneID="8Eq-EX-4tH">
+            <objects>
+                <viewController id="bkx-v6-Tst" customClass="ResultViewController" customModule="CIFilterMixer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="q8W-HE-yr5">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="YyA-8V-qLL">
+                                <rect key="frame" x="0.0" y="85" width="414" height="777"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="Fcs-5B-Chn">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Fcs-5B-Chn" id="f6o-tg-Eda">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="bkx-v6-Tst" id="qle-0k-XAx"/>
+                                    <outlet property="delegate" destination="bkx-v6-Tst" id="tRb-kQ-Eor"/>
+                                </connections>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="joF-z3-DSD">
+                                <rect key="frame" x="20" y="44" width="34" height="30"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <action selector="back:" destination="bkx-v6-Tst" eventType="touchUpInside" id="cpK-Wl-7vw"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="YyA-8V-qLL" firstAttribute="width" secondItem="YA9-jT-FbY" secondAttribute="width" id="2as-EK-6ER"/>
+                            <constraint firstAttribute="trailing" secondItem="YyA-8V-qLL" secondAttribute="trailing" id="7RD-bX-qyL"/>
+                            <constraint firstItem="YyA-8V-qLL" firstAttribute="bottom" secondItem="YA9-jT-FbY" secondAttribute="bottom" id="Hz6-4v-opB"/>
+                            <constraint firstItem="YA9-jT-FbY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="joF-z3-DSD" secondAttribute="trailing" symbolic="YES" id="Rav-xe-uCy"/>
+                            <constraint firstItem="YyA-8V-qLL" firstAttribute="leading" secondItem="q8W-HE-yr5" secondAttribute="leading" id="VEz-ZO-s66"/>
+                            <constraint firstItem="joF-z3-DSD" firstAttribute="leading" secondItem="q8W-HE-yr5" secondAttribute="leadingMargin" id="dNm-3f-16G"/>
+                            <constraint firstItem="YyA-8V-qLL" firstAttribute="top" secondItem="joF-z3-DSD" secondAttribute="bottom" constant="11" id="ncK-db-fdT"/>
+                            <constraint firstItem="joF-z3-DSD" firstAttribute="top" secondItem="YA9-jT-FbY" secondAttribute="top" id="sle-aP-ddf"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="YA9-jT-FbY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WFz-2Z-WJh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="993" y="139"/>
+        </scene>
+    </scenes>
+</document>
