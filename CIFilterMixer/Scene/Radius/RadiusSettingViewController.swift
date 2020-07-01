@@ -34,7 +34,9 @@ class RadiusSettingViewController: UIViewController {
                              filter: CIFilter,
                              dismissHandler: @escaping ((_ uiImage: UIImage?, _ value: Float, _ filterName: String) -> Void) )
         -> RadiusSettingViewController {
-            let vc = RadiusSettingViewController()
+            guard let vc = UIStoryboard.makeInitialViewController(storyboardName: "Radius") as? RadiusSettingViewController else {
+                fatalError()
+            }
             vc.image = image
             vc.filter = filter
             vc.afterDismiss = dismissHandler

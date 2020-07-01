@@ -28,6 +28,7 @@
 		22F5335124AC59C100AB26DA /* CIFilterExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F5335024AC59C100AB26DA /* CIFilterExtension.swift */; };
 		22F5335424AC6B9000AB26DA /* Result.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22F5335324AC6B9000AB26DA /* Result.storyboard */; };
 		22F5335624AC6CEC00AB26DA /* UIStoryboardExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F5335524AC6CEC00AB26DA /* UIStoryboardExtension.swift */; };
+		22F5335824AC6F6200AB26DA /* Radius.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22F5335724AC6F6200AB26DA /* Radius.storyboard */; };
 		22FEBC9A24A48B9B00773A87 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FEBC9924A48B9B00773A87 /* AppDelegate.swift */; };
 		22FEBC9C24A48B9B00773A87 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FEBC9B24A48B9B00773A87 /* SceneDelegate.swift */; };
 		22FEBC9E24A48B9B00773A87 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FEBC9D24A48B9B00773A87 /* ViewController.swift */; };
@@ -58,6 +59,7 @@
 		22F5335024AC59C100AB26DA /* CIFilterExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CIFilterExtension.swift; sourceTree = "<group>"; };
 		22F5335324AC6B9000AB26DA /* Result.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Result.storyboard; sourceTree = "<group>"; };
 		22F5335524AC6CEC00AB26DA /* UIStoryboardExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStoryboardExtension.swift; sourceTree = "<group>"; };
+		22F5335724AC6F6200AB26DA /* Radius.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Radius.storyboard; sourceTree = "<group>"; };
 		22FEBC9624A48B9A00773A87 /* CIFilterMixer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CIFilterMixer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22FEBC9924A48B9B00773A87 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		22FEBC9B24A48B9B00773A87 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				22859A8524A5FAB500CBE1B2 /* RadiusSettingViewController.swift */,
+				22F5335724AC6F6200AB26DA /* Radius.storyboard */,
 			);
 			path = Radius;
 			sourceTree = "<group>";
@@ -252,6 +255,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22F5335824AC6F6200AB26DA /* Radius.storyboard in Resources */,
 				22FEBCA624A48B9C00773A87 /* LaunchScreen.storyboard in Resources */,
 				22F5335424AC6B9000AB26DA /* Result.storyboard in Resources */,
 				22F5334824AC309900AB26DA /* AMColorPickerTableViewCell.xib in Resources */,
