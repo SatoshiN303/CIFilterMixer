@@ -18,6 +18,7 @@ protocol ViewProtocol: class {
     func updateImageView(_ img: UIImage?)
     func updateEffectCount(count: Int)
     func showColorPicker(_ filter: CIFilter)
+    func resetColorControls()
 }
 
 class ViewController: UIViewController, ViewProtocol {
@@ -125,15 +126,23 @@ class ViewController: UIViewController, ViewProtocol {
         self.effectCountLabel.text = String(count)
     }
     
+    func resetColorControls() {
+        self.contrastValue = 1
+        self.brightnessValue = 0
+        self.saturationValue = 1
+    }
+    
     // MARK: - MISC
     
     private func reset() {
         self.imageView.image = #imageLiteral(resourceName: "main")
-        self.contrastValue = 1
-        self.brightnessValue = 0
-        self.saturationValue = 1
+        resetColorControls()
         updateEffectCount(count: 0)
         presenter.reset()
+    }
+    
+    private func undo() {
+        presenter.undo()
     }
 }
 
@@ -153,6 +162,7 @@ extension ViewController {
     }
     
     @IBAction func undo(_ sender: Any) {
+        undo()
     }
     
     
