@@ -27,14 +27,14 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="zeE-RD-FhL">
                                         <rect key="frame" x="0.0" y="280" width="414" height="20.5"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="使用しているフィルター: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K5x-dF-uwq">
-                                                <rect key="frame" x="0.0" y="0.0" width="200" height="20.5"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current Filter Count" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K5x-dF-uwq">
+                                                <rect key="frame" x="0.0" y="0.0" width="151.5" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2g3-wU-bys">
-                                                <rect key="frame" x="204" y="0.0" width="210" height="20.5"/>
+                                                <rect key="frame" x="155.5" y="0.0" width="258.5" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -53,7 +53,7 @@
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t24-1N-w4P">
                                                                 <rect key="frame" x="0.0" y="0.0" width="131.5" height="30"/>
                                                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                                                <state key="normal" title="クリア">
+                                                                <state key="normal" title="Reset">
                                                                     <color key="titleColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 </state>
                                                                 <connections>
@@ -63,7 +63,7 @@
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WjD-ut-Ej1">
                                                                 <rect key="frame" x="141.5" y="0.0" width="131" height="30"/>
                                                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                                                <state key="normal" title="結果">
+                                                                <state key="normal" title="Result">
                                                                     <color key="titleColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 </state>
                                                                 <connections>
@@ -73,7 +73,7 @@
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9IY-m8-wxM">
                                                                 <rect key="frame" x="282.5" y="0.0" width="131.5" height="30"/>
                                                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                                                <state key="normal" title="Undo(一個戻り)">
+                                                                <state key="normal" title="Undo">
                                                                     <color key="titleColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 </state>
                                                                 <connections>
@@ -83,9 +83,9 @@
                                                         </subviews>
                                                     </stackView>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cAH-di-al7">
-                                                        <rect key="frame" x="0.0" y="40" width="221" height="30"/>
+                                                        <rect key="frame" x="0.0" y="40" width="238" height="30"/>
                                                         <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <state key="normal" title="CIColorMonochrome(色1回選択)"/>
+                                                        <state key="normal" title="CIColorMonochrome (Select once)"/>
                                                         <connections>
                                                             <action selector="CIColorMonochrome:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eNs-6A-1yK"/>
                                                         </connections>
@@ -107,25 +107,25 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fTm-sS-GRt">
-                                                        <rect key="frame" x="0.0" y="160" width="168" height="30"/>
+                                                        <rect key="frame" x="0.0" y="160" width="186" height="30"/>
                                                         <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <state key="normal" title="CIFalseColor(色2回選択)"/>
+                                                        <state key="normal" title="CIFalseColor (Select twice)"/>
                                                         <connections>
                                                             <action selector="CIFalseColor:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rHW-QK-FOb"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EEd-By-lZU">
-                                                        <rect key="frame" x="0.0" y="200" width="203" height="30"/>
+                                                        <rect key="frame" x="0.0" y="200" width="259" height="30"/>
                                                         <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <state key="normal" title="CIMaximumComponent(黒白)"/>
+                                                        <state key="normal" title="CIMaximumComponent (black&amp;white)"/>
                                                         <connections>
                                                             <action selector="CIMaximumComponent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3le-fC-JaL"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PwV-tQ-pgV">
-                                                        <rect key="frame" x="0.0" y="240" width="199" height="30"/>
+                                                        <rect key="frame" x="0.0" y="240" width="256" height="30"/>
                                                         <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <state key="normal" title="CIMinimumComponent(黒白)"/>
+                                                        <state key="normal" title="CIMinimumComponent (black&amp;white)"/>
                                                         <connections>
                                                             <action selector="CIMinimumComponent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lWI-F5-dOn"/>
                                                         </connections>
@@ -155,17 +155,17 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3wU-tq-PAm">
-                                                        <rect key="frame" x="0.0" y="400" width="176" height="30"/>
+                                                        <rect key="frame" x="0.0" y="400" width="233" height="30"/>
                                                         <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <state key="normal" title="CIPhotoEffectMono(黒白)"/>
+                                                        <state key="normal" title="CIPhotoEffectMono (black&amp;white)"/>
                                                         <connections>
                                                             <action selector="CIPhotoEffectMono:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TqD-AB-mi8"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="chB-Bj-E90">
-                                                        <rect key="frame" x="0.0" y="440" width="166" height="30"/>
+                                                        <rect key="frame" x="0.0" y="440" width="223" height="30"/>
                                                         <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <state key="normal" title="CIPhotoEffectNoir(黒白)"/>
+                                                        <state key="normal" title="CIPhotoEffectNoir (black&amp;white)"/>
                                                         <connections>
                                                             <action selector="CIPhotoEffectNoir:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7uN-Ce-x6I"/>
                                                         </connections>
@@ -179,9 +179,9 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eiJ-rb-Szf">
-                                                        <rect key="frame" x="0.0" y="520" width="173" height="30"/>
+                                                        <rect key="frame" x="0.0" y="520" width="230" height="30"/>
                                                         <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <state key="normal" title="CIPhotoEffectTonal(黒白)"/>
+                                                        <state key="normal" title="CIPhotoEffectTonal (black&amp;white)"/>
                                                         <connections>
                                                             <action selector="CIPhotoEffectTonal:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BbC-bD-6Da"/>
                                                         </connections>
@@ -254,13 +254,13 @@
                                                         <rect key="frame" x="0.0" y="880" width="414" height="30"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contrast" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Has-MF-1vb">
-                                                                <rect key="frame" x="0.0" y="0.0" width="58.5" height="30"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="54.5" height="30"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="2" translatesAutoresizingMaskIntoConstraints="NO" id="8ah-0s-SRk">
-                                                                <rect key="frame" x="66.5" y="0.0" width="297.5" height="31"/>
+                                                                <rect key="frame" x="62.5" y="0.0" width="301.5" height="31"/>
                                                                 <connections>
                                                                     <action selector="contrastChnageFinished:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0pi-Ek-ksB"/>
                                                                     <action selector="contrastChnaged:" destination="BYZ-38-t0r" eventType="valueChanged" id="i83-zA-2Q2"/>
@@ -278,13 +278,13 @@
                                                         <rect key="frame" x="0.0" y="920" width="414" height="30"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Brightness" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wna-mU-198">
-                                                                <rect key="frame" x="0.0" y="0.0" width="70" height="30"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="82" height="30"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="v6o-aV-zPs">
-                                                                <rect key="frame" x="68" y="0.0" width="306" height="31"/>
+                                                                <rect key="frame" x="80" y="0.0" width="294" height="31"/>
                                                                 <connections>
                                                                     <action selector="brightnessChageFinished:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SPK-9v-UtX"/>
                                                                     <action selector="brightnessChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="goq-cP-k6P"/>
@@ -302,13 +302,13 @@
                                                         <rect key="frame" x="0.0" y="960" width="414" height="30"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Saturation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L51-VK-jjf">
-                                                                <rect key="frame" x="0.0" y="0.0" width="67" height="30"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="79" height="30"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="2" translatesAutoresizingMaskIntoConstraints="NO" id="iyh-l0-hkm">
-                                                                <rect key="frame" x="65" y="0.0" width="309" height="31"/>
+                                                                <rect key="frame" x="77" y="0.0" width="297" height="31"/>
                                                                 <connections>
                                                                     <action selector="saturationChangeFinished:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ulu-1C-Jap"/>
                                                                     <action selector="saturationChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="nIU-lF-74c"/>

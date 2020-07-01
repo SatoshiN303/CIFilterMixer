@@ -93,8 +93,8 @@ class ViewController: UIViewController, ViewProtocol {
     }
     
     private func showResult() {
-        // 適用したフィルター名の配列と Saturation, Brightness, Contrast の値を
-        // ResultVCに渡して表示する
+        let vc = ResultViewController.makeInstance(effects: presenter.effects)
+        self.present(vc, animated: true, completion: nil)
     }
     
     // MARK: - View Protocol

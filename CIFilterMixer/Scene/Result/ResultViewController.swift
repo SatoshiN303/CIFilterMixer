@@ -10,21 +10,36 @@ import UIKit
 
 class ResultViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    public var effects: [String] = []
 
-        // Do any additional setup after loading the view.
+    static func makeInstance(effects: [String]) -> ResultViewController {
+        guard let vc = UIStoryboard.makeInitialViewController(storyboardName: "Result") as? ResultViewController else {
+            fatalError()
+        }
+        vc.effects = effects
+        return vc
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    override func viewDidLoad() {
+        super.viewDidLoad()
     }
-    */
+    
+    @IBAction func back(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+}
 
+extension ResultViewController: UITableViewDataSource, UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.effects.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        cell.textLabel!.text = self.effects[indexPath.row]
+        cell.textLabel?.adjustsFontSizeToFitWidth = true
+        return cell
+    }
 }
