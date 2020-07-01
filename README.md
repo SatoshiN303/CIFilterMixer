@@ -12,11 +12,11 @@ The project that was made for the test was rebuilt by me for study purposes. Tha
  - reset / undo
  - color contolrs
  - color cube
+ - change filter params
 
 ## Notice
  - Xcode 11.3.1, iOS13~ only tested on my Mac.
  - If the CIFilter you want to try is not added, add it yourself.
- - All Filter use default parameters.
 
 ## License
 MIT
